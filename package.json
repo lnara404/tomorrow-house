@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr --source-map true styles/main.scss style.css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/lnara-FE/tomorrow-house/issues"
   },
-  "homepage": "https://github.com/lnara-FE/tomorrow-house#readme"
+  "homepage": "https://github.com/lnara-FE/tomorrow-house#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
