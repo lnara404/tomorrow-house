@@ -417,6 +417,17 @@ ol {
   list-style: none; }
 
 /*
+.section {
+  @include responsive(T) {
+    color: red;
+  }
+
+  @inclue responsive(D) {
+    color: blud;
+  }
+}
+*/
+/*
   * Mobile (<768px) ---------------------
   * fixture - sm
   * # of columns - 4개
