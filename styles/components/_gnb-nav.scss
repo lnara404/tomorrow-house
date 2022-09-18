@@ -1,0 +1,12 @@
+.gnb-nav {
+  &-list {
+    @include flexbox(start);
+    gap: 24px;
+  }
+
+  &-item {
+    @include text-style(18, $primary);
+
+    font-weight: 700;
+  }
+}

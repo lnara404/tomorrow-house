@@ -41,4 +41,49 @@
   &-menu-button {
     color: $blue;
   }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flexbox(start);
+
+      gap: 32px;
+    }
+
+    &-right {
+      @include flexbox(right);
+
+      gap: 24px;
+
+      .button-group {
+        gap: 8px;
+      }
+    }
+
+    .logo {
+      position: static;
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      gap: 4px;
+      width: 88px;
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+      }
+    }
+  }
 }
