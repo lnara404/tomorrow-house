@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   font-family: $font-main;
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 button,
 input,
 select,
@@ -36,11 +41,6 @@ textarea {
     outline: none;
     box-shadow: none;
   }
-}
-
-a,
-button {
-  cursor: pointer;
 }
 
 ul,

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "node-sass": "node-sass",
-    "sass": "node-sass -wr --source-map true styles/main.scss style.css"
+    "sass": "node-sass -wr --source-map true styles/main.scss style.css",
+    "stylelint": "stylelint --ignore-path .gitignore '**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   },
   "homepage": "https://github.com/lnara-FE/tomorrow-house#readme",
   "devDependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard-scss": "^5.0.0"
   }
 }
