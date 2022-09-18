@@ -611,7 +611,7 @@ ol {
 
 /* NOTE: Button States */
 .form-select,
-.input-select {
+.form-input {
   /* form 관련 요소 default style */
   font-size: 16px;
   line-height: 24px;
@@ -628,13 +628,13 @@ ol {
   /* 브라우저 기본 스타일 초기화 */
   transition: background-color 200ms ease-in-out; }
   .form-select::placeholder,
-  .input-select::placeholder {
+  .form-input::placeholder {
     color: #b2b3b9; }
   .form-select:not(:disabled):hover,
-  .input-select:not(:disabled):hover {
+  .form-input:not(:disabled):hover {
     background-color: #f7f8fa; }
   .form-select:disabled,
-  .input-select:disabled {
+  .form-input:disabled {
     cursor: not-allowed;
     opacity: 0.4; }
 
@@ -821,7 +821,7 @@ i {
   .container .row {
     display: flex;
     flex-wrap: wrap; }
-  .container [class^='clo-'] {
+  .container [class^='col-'] {
     padding: 0 10px; }
   .container .col-sm-1 {
     width: 25%; }
