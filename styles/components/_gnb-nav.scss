@@ -1,12 +1,25 @@
 .gnb-nav {
+  $padding: 8px;
+
   &-list {
     @include flexbox(start);
-    gap: 24px;
+    gap: 24px - ($padding * 2); /* 사용성을 위해 클릭 영역을 늘리기위해 padding을 추가하여 원래 간격이 24px인데 확장한 padding 만큼 제거 */
   }
 
   &-item {
-    @include text-style(18, $primary);
+    a {
+      display: block;
+      padding: $padding;
+      @include text-style(18, $primary);
 
-    font-weight: 700;
+      font-weight: 700;
+    }
+
+    &.is-active,
+    &:hover {
+      a {
+        color: $blue;
+      }
+    }
   }
 }
