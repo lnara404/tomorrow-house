@@ -1013,6 +1013,17 @@ i {
       gap: 24px; }
       .gnb-right .button-group {
         gap: 8px; }
+        .gnb-right .button-group .gnb-auth {
+          display: inline-flex;
+          gap: 12px; }
+          .gnb-right .button-group .gnb-auth a {
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            color: #8c8d96;
+            font-weight: 700; }
+            .gnb-right .button-group .gnb-auth a:hover {
+              color: #3da5f5; }
     .gnb .logo {
       position: static;
       transform: none; }
