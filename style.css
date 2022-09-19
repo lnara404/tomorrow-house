@@ -798,6 +798,22 @@ i {
   color: #3f4150;
   font-weight: 700; }
 
+.gnb-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: #8c8d96;
+  transition: color 200ms ease-in-out; }
+  .gnb-icon-button.is-menu {
+    color: #3da5f5; }
+    .gnb-icon-button.is-menu:active {
+      color: #3186c4; }
+  .gnb-icon-button:active {
+    color: #3f4150; }
+
 /* stylelint-disable scss/no-global-function-names */
 /*
   * Mobile (<768px) ---------------------
@@ -952,16 +968,6 @@ i {
       display: block;
       width: auto;
       height: 20px; }
-  .gnb-icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: #8c8d96; }
-  .gnb-menu-button {
-    color: #3da5f5; }
   @media screen and (min-width: 768px) {
     .gnb-wrapper {
       height: 80px; }
