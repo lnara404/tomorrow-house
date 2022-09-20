@@ -1,6 +1,5 @@
 %btn-base {
   @include inline-flexbox;
-
   padding: 0 8px;
   font-weight: 700;
   border-radius: 4px;
@@ -17,7 +16,6 @@
 */
 .btn-primary {
   @extend %btn-base;
-
   color: $white;
   background-color: $blue;
   transition: background-color 300ms ease-in-out;
@@ -29,7 +27,6 @@
 
 .btn-secondary {
   @extend %btn-base;
-
   color: $primary;
   background-color: $border;
   transition: background-color 300ms ease-in-out;
@@ -41,7 +38,6 @@
 
 .btn-outlined {
   @extend %btn-base;
-
   color: $blue;
   background-color: $white;
   border: 1px solid $blue;
@@ -54,7 +50,6 @@
 
 .btn-ghost {
   @extend %btn-base;
-
   color: $primary;
   background-color: transparent;
 

@@ -62,7 +62,6 @@
 
 .price-off {
   @extend %price-base;
-
   color: $secondary;
 
   .amount {
@@ -74,7 +73,6 @@
 
   .currency {
     @include text-style(14);
-
     font-weight: 400;
   }
 }
