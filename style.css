@@ -5,6 +5,8 @@
   흰색 다음으로 연한 색상은 대부분 배경으로 사용
   배경보다 조금 더 진하면 보더에 사용
 */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
 /* scss-lint:disable all */
 @font-face {
   font-family: tomorrow;
@@ -844,6 +846,51 @@ i {
     .gnb-icon-button:hover {
       color: #fff;
       background-color: #3da5f5; } }
+
+.my-menu {
+  position: relative; }
+  .my-menu-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18); }
+    .my-menu-content::before, .my-menu-content::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -24px;
+      display: block;
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 12px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 10px solid transparent; }
+    .my-menu-content::before {
+      border-bottom-color: #e0e2e7; }
+    .my-menu-content::after {
+      top: -22px;
+      border-bottom-color: #fff; }
+  .my-menu-list {
+    width: 200px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #e0e2e7;
+    border-radius: 4px; }
+  .my-menu-item a,
+  .my-menu-item button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 44px;
+    padding: 0 8px;
+    border-radius: 4px; }
+    .my-menu-item a:hover,
+    .my-menu-item button:hover {
+      background-color: #f7f8fa; }
 
 /* stylelint-disable scss/no-global-function-names */
 /*
