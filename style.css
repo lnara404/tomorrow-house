@@ -919,6 +919,82 @@ i {
     .my-menu-item button:hover {
       background-color: #f7f8fa; }
 
+/* stylelint-disable scss/at-function-pattern */
+.drawer-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 54px;
+  padding: 0 8px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #3f4150;
+  font-weight: 700;
+  transition: color 200ms ease-in-out; }
+  .drawer-menu-button i:first-child {
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+    font-size: 24px;
+    color: #3f4150; }
+  .drawer-menu-button i:last-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    font-size: 16px;
+    color: #3f4150;
+    transition: transform 200ms ease-in-out; }
+
+.drawer-menu-content {
+  max-height: 0;
+  overflow: hidden;
+  /* 	
+      display는 transition 적용이 안된다. 자연스로운 동작을 위해 max-height를 사용해서 아이템을 보이고 숨기고 처리가 가능합니다. 자연스로운 동작 구현을 위해서는 javascript를 활용(하위 아이템 갯수를 구하고 max-height 값을 계산함)하고 고정된 max-height가 있다면 css 만으로도 자연스러운 애니메이션 구현이 가능합니다.	
+    */
+  transition: max-height 200ms ease-in-out; }
+
+.drawer-menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #3f4150;
+  font-weight: 700; }
+
+.drawer-menu-item.is-active a {
+  color: #3da5f5; }
+
+.drawer-menu-item .ic-new {
+  font-size: 16px;
+  color: #f86d7d; }
+
+.drawer-menu.is-active .drawer-menu-button {
+  color: #3da5f5; }
+
+.drawer-menu.is-open .drawer-menu-button .ic-chevron {
+  transform: translateY(-50%) rotate(180deg); }
+
+.drawer-menu.is-open .drawer-menu-list {
+  padding-bottom: 8px; }
+
+.drawer-menu.is-open.is-community .drawer-menu-content {
+  max-height: 296px; }
+
+.drawer-menu.is-open.is-store .drawer-menu-content {
+  max-height: 332px; }
+
+.drawer-menu.is-open.is-expert .drawer-menu-content {
+  max-height: 80px; }
+
 /* stylelint-disable scss/no-global-function-names */
 /*
   * Mobile (<768px) ---------------------

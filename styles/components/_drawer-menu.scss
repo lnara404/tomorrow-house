@@ -1,0 +1,109 @@
+/* stylelint-disable scss/at-function-pattern */
+.drawer-menu {
+  $drawer-menu-item-height: 36px;
+  $drawer-menu-list-padding: 8px;
+  $community-length: 8;
+  $store-length: 9;
+  $expert-length: 2;
+
+  @function _calculate-max-content-height($length) {
+    @return $drawer-menu-item-height * $length + $drawer-menu-list-padding;
+  }
+
+  &-button {
+    @include flexbox(start);
+    position: relative;
+    width: 100%;
+    height: 54px;
+    padding: 0 8px;
+
+    @include text-style(18, $primary);
+    font-weight: 700;
+    transition: color 200ms ease-in-out;
+
+    i {
+      &:first-child {
+        position: relative; // TODO: Check
+        top: 1px; // TODO: Check
+        margin-right: 8px;
+        font-size: 24px;
+        color: $primary;
+      }
+
+      &:last-child {
+        @include pos-center-y;
+        right: 8px;
+        font-size: 16px;
+        color: $primary;
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+
+    /* 	
+      display는 transition 적용이 안된다. 자연스로운 동작을 위해 max-height를 사용해서 아이템을 보이고 숨기고 처리가 가능합니다. 자연스로운 동작 구현을 위해서는 javascript를 활용(하위 아이템 갯수를 구하고 max-height 값을 계산함)하고 고정된 max-height가 있다면 css 만으로도 자연스러운 애니메이션 구현이 가능합니다.	
+    */
+    transition: max-height 200ms ease-in-out;
+  }
+
+  &-item {
+    a {
+      @include flexbox(start);
+      width: 100%;
+      height: $drawer-menu-item-height;
+      padding: 0 12px;
+
+      @include text-style(14, $primary);
+      font-weight: 700;
+    }
+
+    &.is-active {
+      a {
+        color: $blue;
+      }
+    }
+
+    .ic-new {
+      font-size: 16px;
+      color: $red;
+    }
+  }
+
+  &.is-active {
+    .drawer-menu-button {
+      color: $blue;
+    }
+  }
+
+  &.is-open {
+    .drawer-menu-button .ic-chevron {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .drawer-menu-list {
+      padding-bottom: $drawer-menu-list-padding;
+    }
+
+    &.is-community {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($community-length);
+      }
+    }
+
+    &.is-store {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($store-length);
+      }
+    }
+
+    &.is-expert {
+      .drawer-menu-content {
+        max-height: _calculate-max-content-height($expert-length);
+      }
+    }
+  }
+}
