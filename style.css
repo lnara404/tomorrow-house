@@ -447,6 +447,10 @@ ol {
 .avatar-24, .avatar-32 {
   display: block;
   overflow: hidden;
+  background-image: url("./assets/images/img-user-default.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   border-radius: 50%; }
   .avatar-24 img, .avatar-32 img {
     display: block;
@@ -853,6 +857,10 @@ i {
     width: 32px;
     height: 32px;
     overflow: hidden;
+    background-image: url("./assets/images/img-user-default.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     border: 3px solid #fff;
     border-radius: 50%;
     transition: border-color 200ms ease-in-out; }
@@ -1102,5 +1110,54 @@ i {
   @media screen and (min-width: 1200px) {
     .gnb-right .input-group {
       width: 264px; } }
+
+/* stylelint-disable no-descending-specificity */
+.sidebar {
+  width: 240px;
+  padding: 32px 20px;
+  background-color: #fff; }
+  .sidebar-header {
+    padding: 0 12px; }
+    .sidebar-header .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      /* 로고 이미지 영역만 클릭이 가능하도록 하기 위해 */ }
+      .sidebar-header .logo a {
+        display: block; }
+      .sidebar-header .logo img {
+        display: block;
+        width: auto;
+        height: 20px; }
+  .sidebar-user, .sidebar-auth {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 88px; }
+  .sidebar-user a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #3f4150; }
+    .sidebar-user a .avatar-24 {
+      flex-grow: 0;
+      flex-shrink: 0; }
+    .sidebar-user a .username {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .sidebar-auth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .sidebar-auth a {
+      width: 84px; }
 
 /*# sourceMappingURL=style.css.map */

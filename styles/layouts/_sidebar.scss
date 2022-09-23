@@ -1,0 +1,71 @@
+/* stylelint-disable no-descending-specificity */
+.sidebar {
+  width: 240px;
+  padding: 32px 20px;
+  background-color: $white;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flexbox(
+        start
+      ); /* 로고 이미지 영역만 클릭이 가능하도록 하기 위해 */
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    @include flexbox(start);
+    height: 88px;
+  }
+
+  &-user {
+    // padding: 2rem 0;
+
+    a {
+      @include flexbox(start);
+      gap: 8px;
+      width: 100%;
+      font-weight: 700;
+
+      @include text-style(14, $primary);
+
+      .avatar-24 {
+        // 남은 여백 채우지 않고 기존 크기 무조건 유지
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .username {
+        // 남은 여백을 모두 채우기
+        flex-grow: 1;
+
+        // truncate, truncation 처리 = usename이 길어졌을 경우를 대비해 한 줄 및 말줌임표 처리
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+
+    // padding: 1.5rem 0;
+
+    a {
+      width: 84px;
+    }
+  }
+}
