@@ -1,6 +1,12 @@
 %avatar-base {
   display: block;
   overflow: hidden;
+
+  // 프로필 이미지 없는 경우 대응
+  background-image: url('./assets/images/img-user-default.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   border-radius: 50%;
 
   img {
