@@ -998,7 +998,8 @@ i {
 .search-history-header {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 8px; }
   .search-history-header .title,
   .search-history-header button {
     font-size: 13px;
@@ -1021,7 +1022,10 @@ i {
   font-weight: 400; }
 
 .search-history-item {
-  position: relative; }
+  position: relative;
+  border-radius: 2px; }
+  .search-history-item:hover {
+    background-color: #f7f8fa; }
   .search-history-item .word-button {
     width: 100%;
     padding: 10px 32px 10px 8px;
@@ -1042,6 +1046,8 @@ i {
     height: 32px;
     font-size: 16px;
     color: #b2b3b9; }
+    .search-history-item .delet-button:hover {
+      color: #3f4150; }
 
 /* stylelint-disable scss/no-global-function-names */
 /*
